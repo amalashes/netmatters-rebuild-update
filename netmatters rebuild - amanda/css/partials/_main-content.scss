@@ -1,0 +1,158 @@
+// main: ../style.scss
+
+//================================//
+//       MAIN CONTENT
+//================================//
+
+// MAIN DISPLAY IMAGE
+
+
+//DOTS ON BANNER SLIDE
+.slick-dots {
+  bottom: 45px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: white;
+  line-height: 22px;
+  opacity: 0.5; 
+}
+
+
+.slick-dots li.slick-active button:before {
+  color: white;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+  
+.slide-web {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), 80%, transparent),
+  url('../img/banner/home-1.jpg');
+@include slide;
+@include mqmin('md') {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.70), 70%, transparent),
+  url('../img/banner/home-1.jpg');
+  }
+  .btn-find {
+    background-color: $web-design;
+  }
+}
+
+.slide-it {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), 80%, transparent),
+  url('../img/banner/home-2.jpg');
+@include slide;
+@include mqmin('md') {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.70), 70%, transparent),
+  url('../img/banner/home-2.jpg');
+  }
+  .btn-find {
+    background-color: $it-support;
+  }
+}
+
+.slide-tel {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), 80%, transparent),
+  url('../img/banner/home-3.jpg');
+@include slide;
+@include mqmin('md') {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.70), 70%, transparent),
+  url('../img/banner/home-3.jpg');
+  }
+  .btn-find {
+    background-color: $telecoms-services;
+  }
+}
+
+.slide-dig {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), 80%, transparent),
+  url('../img/banner/home-5.jpg');
+@include slide;
+@include mqmin('md') {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.70), 70%, transparent),
+  url('../img/banner/home-5.jpg');
+  }
+  .btn-find {
+    background-color: $digital-marketing;
+    width: 350px;
+  }
+}
+
+.slide-bes {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), 80%, transparent),
+  url('../img/banner/home-4.jpg');
+@include slide;
+@include mqmin('md') {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.70), 70%, transparent),
+  url('../img/banner/home-4.jpg');
+  }
+  .btn-find {
+    background-color: $bespoke-software;
+  }
+}
+
+.slide-cyb {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85), 80%, transparent),
+  url('../img/banner/home-6.jpg');
+@include slide;
+@include mqmin('md') {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.70), 70%, transparent),
+  url('../img/banner/home-6.jpg');
+  }
+  .btn-find {
+    background-color: $cyber-security;
+  }
+}
+
+// MAIN TEXT ON TOP OF IMAGE
+.img-text {
+  margin-top: 225px;
+  display: flex; 
+  flex-direction: column;
+  @include mq('lg') {
+    margin-top: 300px;
+  }
+  @include mq('md') {
+    margin-top: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  @include mq('xs') {
+    margin-top: 100px;
+  }
+}
+
+.main-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+  @include mq('md') {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.main-img-header {
+  color: white;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 10px;
+& ~ p {
+  color: white;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+}
+

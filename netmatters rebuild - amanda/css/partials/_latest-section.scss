@@ -1,0 +1,152 @@
+// main: ../style.scss
+//================================//
+//  LATEST NEWS SECTION
+//================================//
+
+// LATEST SECTION CONTAINER
+.latest {
+  display: flex;
+  padding: 0;
+  @include mq('sm'){
+    flex-wrap: wrap;
+  }
+}
+
+// CARDS BODY AND TITLE
+.latest-body {
+  background: $white;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+  border-radius: .25rem;
+  text-align: left;
+  color: #333645;
+  margin: 40px 15px 40px;
+   position:relative;
+  overflow: hidden;
+  @include mq('sm'){
+    margin: 15px;
+  }
+h2 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: $main-button-color;
+}
+}
+
+.latest-img-container {
+  overflow: hidden;
+  @include mqmin ('md'){
+    height: 263px;
+  }
+  @include mqmin ('lg') {
+  height: 213px;
+  }
+}
+
+.latest-text-container {
+  z-index: 1;
+  padding: 5px 30px 20px;
+  margin: auto;
+}
+
+// CARD TEXT
+.latest-text {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: grey;
+}
+
+.latest-body footer {
+  font-size: 13px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  letter-spacing: .75px;
+  position: relative;
+}
+.posted-by {            //AUTHOR
+  font-size: 13px;
+  color: #333645;
+  font-weight: 600;
+  margin-left: 60px;
+}
+.date {         // DATE CARD WAS WRITTEN
+  color: grey;
+  margin-left: 60px;
+}
+
+.nm-icon {          // IMAGE ICON OF AUTHOR ON CARDS
+  position: absolute;
+  bottom: 15px;
+  height: 47px;
+  width: 47px;
+}
+
+// IMAGE ON CARD
+img.latest-img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  left: 0px;
+  top: 0px;
+}
+
+// TEXT ON TOP OF IMAGE
+.image-caption {
+  background-color: $main-button-color;
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 0px 10px;
+  height: 23px;
+  & p {
+    padding: 0;
+    margin-top: 4px;
+    font-weight: 600;
+  }
+}
+
+// CHANGES COLOUR OF MIDDLE CARD
+.insights h2 {
+  color: $it-support;
+}
+
+.insights .image-caption {
+  background-color: $it-support;
+}
+
+//================================//
+//        ON HOVER
+//================================//
+
+.latest-body h2:hover,
+.latest-body .image-caption:hover {
+  text-decoration: underline;
+}
+
+img.latest-img:hover {
+  opacity: 0.75;
+  transform: scale(1.1, 1.1);
+  transition-duration: .3s;
+  @include mq('md') {
+    transform:none;
+    opacity: 1;
+  }
+}
+
+// MEDIA QUERY TO REMOVE A CARD IN LARGER SCREENS
+.latest-body:last-child {
+@include mq('lg') {
+   display: none;
+ }
+ @include mq('xs') {
+  display: block;
+  }
+}

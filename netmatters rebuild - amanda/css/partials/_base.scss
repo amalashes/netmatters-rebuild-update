@@ -1,0 +1,84 @@
+// main: ../style.scss
+
+//================================//
+//  BODY ELEMENTS AND GENERAL RULES
+//================================//
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  color: $white;
+  line-height: 1.5;
+  font-family: $font-stack-primary;
+  text-align: center;
+  margin: 0;
+  background-color: $white;
+  overflow-x: hidden;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+@include mqmin(sm){
+  width: 750px;
+  }
+@include mqmin(md){
+  width: 970px;
+  }
+@include mqmin(lg){
+  width: 1200px;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  line-height: 20px;
+  justify-content: center;
+  padding: 0;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+//================================//
+//        LATEST BAR DIVIDER
+//================================//
+
+.bar {
+  height: 109px;
+
+  h3 {
+    color: $primary-color;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-top: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+  }
+  .latest-bar {
+  height: 5px;
+  width: 66px;
+  margin-top: 34.5px;
+  background: $primary-color;
+  display: flex;
+  }
+}
+
+.latest-bar-bg {
+background-color: $white;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+  margin-bottom: 32px
+}

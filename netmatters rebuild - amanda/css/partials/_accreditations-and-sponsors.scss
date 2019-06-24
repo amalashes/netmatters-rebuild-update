@@ -1,0 +1,161 @@
+// main: ../style.scss
+
+//================================//
+//        SPONSORS
+//================================//
+
+//SPONSORS BACKGROUND
+.sponsors-bg {
+  box-shadow: inset 0 3px 35px rgba(0, 0, 0, .1);
+  position: relative;
+}
+
+//SPONSORS IMAGES CONTAINER
+.sponsors {
+  height: 170px;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  @include mq('sm'){
+    display: none;
+  }
+}
+
+//SPONSORS IMAGES
+img.sponsor-img {
+padding-right: 20px;
+padding-left: 20px;
+  height: auto;
+    width: 100%;
+  filter: grayscale(100%);
+}
+
+img.sponsor-img:hover {
+  filter: none;
+}
+
+// DISPLAYS BOX ON HOVER
+.sponsor-1:hover .box,
+.sponsor-2:hover .box,
+.sponsor-3:hover .box,
+.sponsor-4:hover .box {
+  display: block;
+}
+
+.box {
+  background-color: $primary-color;
+  position: absolute;
+  display: none;
+  bottom: 100%;
+  z-index: 1;
+  padding: 10px 20px 10px;
+  & h3{
+    font-weight: normal;
+    font-size: 18px;
+  }
+  & p {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 1.5rem;
+  }
+}
+
+// ARROW FOR BOX
+.arrow {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  margin-left: -36px;
+  z-index: 1;
+}
+
+.box .arrow::after {
+    content: '';
+    margin: auto;
+    display: inline-block;
+    border-style: solid;
+    border-width: 35px 36px 0 36px;
+    border-color: #333645 transparent transparent transparent;
+}
+
+.box h3::after {
+  content: '';
+  top: 5;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 5px auto;
+  width: 28px;
+  height: 3px;
+  display: block;
+  background-color: $white;
+}
+
+.sponsor-1 .box {
+  width: 260px;
+  margin-left: -25px;
+  @include mq('md') {
+    margin-left: -50px;
+  }
+}
+
+.sponsor-2 .box {
+  width: 260px;
+  margin-left: 30px;
+  @include mq('md') {
+  margin-left: -10px;
+  }
+}
+
+.sponsor-3 .box {
+  width: 260px;
+  margin-left: -65px;
+  @include mq('md') {
+  margin-left: -85px;
+  }
+}
+
+.sponsor-4 .box {
+  max-width: 260px;
+  margin-left: 55px;
+  @include mq('md') {
+  margin-left: 0px;
+  }
+}
+
+//================================//
+//        ACCREDITATIONS
+//================================//
+
+// ACCREDITATIONS BACKGROUND
+.accreditations-bg {
+  background-color: white;
+}
+
+// ACCREDITATIONS CONTAINER
+.accreditations {
+  height: 170px;
+  background-color: white;
+
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  @include mq('sm'){
+    display: none;
+  }
+}
+
+// ACCREDITATIONS IMAGES
+img.accreditations-img {
+  filter: grayscale(100%);
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+img.accreditations-img:first-child {
+  filter: none;
+}
+
+img.accreditations-img:hover {
+  filter:none;
+}

@@ -1,0 +1,43 @@
+// main: ../style.scss
+// Functions
+@function px-to-rem($target, $context: $base-font-size) {
+    @return ($target / $context) * 1rem;    // Converts pixels to rems
+  }
+
+@function px-to-pc($target, $context: $max-width) {
+  @return ($target / $context) * 100%;        // Converts pixels to page content width
+}
+
+$breakpoints: (
+ 'xs':  576px,
+ 'sm':  768px,
+ 'md':  992px,
+ 'lg':  1260px
+);
+
+/// Mixin to manage responsive breakpoints
+@mixin mq($breakpoint) {
+ // Prints a media query based on the value
+ @media (max-width: map-get($breakpoints, $breakpoint)) {
+   @content;
+ }
+}
+
+@mixin mqmin($breakpoint) {
+ // Prints a media query based on the value
+ @media (min-width: map-get($breakpoints, $breakpoint)) {
+   @content;
+ }
+}
+
+@mixin slide {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 86.5vh;
+  display: flex;
+  align-items: center;
+  @include mqmin('md') {
+    min-height: 76.5vh;
+  }
+}

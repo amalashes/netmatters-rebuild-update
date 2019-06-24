@@ -1,0 +1,49 @@
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: $primary-color;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 0px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+  
+  /* The navigation menu links */
+  .sidenav span {
+    font-size: 22px;
+    display: flex;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .sidenav li {
+    text-align: left;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    padding: 15px;
+    background-color: $primary-color-dark;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    }
+
+  .sidenav li::before {
+    content: "\00BB";
+    margin-right: 10px;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav li:hover {
+    background-color: lighten($primary-color, 10%);
+  }

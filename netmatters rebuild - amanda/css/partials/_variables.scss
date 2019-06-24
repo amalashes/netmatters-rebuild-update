@@ -1,0 +1,32 @@
+// main: ../style.scss
+
+//MAIN FONT PROPERTIES
+$base-font-size: 16px;
+$font-stack-primary: "Poppins", sans-serif;
+
+//COLOUR PROPERTIES
+$web-design: #926FB1;
+
+$it-support: #4183D7;
+$it-support-dark: darken($it-support, 10%);
+
+$telecoms-services: #D64541;
+$telecoms-services-dark: darken($telecoms-services, 10%);
+
+$bespoke-software: #67809F;
+$bespoke-software-dark: darken($bespoke-software, 10%);
+
+$digital-marketing: #2ECC71;
+$digital-marketing-dark: darken($digital-marketing, 10%);
+
+$cyber-security: #F62459;
+$cyber-security-dark: darken($cyber-security, 10%);
+
+$main-button-color: #926FB1;
+$main-button-color-dark: darken($main-button-color, 10%);
+
+$primary-color: #333645;
+$primary-color-dark: darken($primary-color, 5%);
+
+$white: #fff;
+$white-darken: darken($white, 5%);

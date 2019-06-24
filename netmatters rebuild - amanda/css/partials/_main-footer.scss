@@ -1,0 +1,88 @@
+// main: ../style.scss
+
+//================================//
+//       MAIN FOOTER
+//================================//
+
+// MAIN FOOTER BACKGROUND
+.main-footer-bg {
+    background: $primary-color;
+}
+
+// MAIN FOOTER CONTAINER
+.main-footer {
+height:auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+// TEXT COLUMNS
+.col-1,
+.col-2,
+.col-3,
+.col-4 {
+  text-align: left;
+  font-size: 13px;
+  letter-spacing: .5px;
+  line-height: 2rem;
+  width: 25%;
+  @include mq('lg'){
+  width: 50%;
+}
+  @include mq('sm') {
+  width: 100%;
+}
+}
+
+// MAIN FOOTER TITLES OF COLUMNS
+.main-footer h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+//
+.main-footer i {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: $primary-color-dark;
+height: 55px;
+width: 100%;
+font-size: 1.75rem;
+border-radius: .15rem;
+}
+
+// SOCIAL MEDIA LINKS
+.links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.facebook, .twitter, .linkedin {
+  width: 46%;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.facebook {
+  margin-right: 20px;
+}
+
+.linkedin {
+  margin-top: 20px;
+}
+
+.fa-linkedin-in:hover {
+  background-color: #0077B5;
+}
+.fa-facebook-f:hover {
+  background-color: #3B5998;
+}
+.fa-twitter:hover {
+  background-color: #00ACED;
+}

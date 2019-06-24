@@ -1,0 +1,189 @@
+// main: ../style.scss
+
+//================================//
+//       NAVIGATION
+//================================//
+
+// NAVIGATION BAR CONTAINER
+nav {
+  background-color: $primary-color;
+}
+
+.navigation {
+  background-color: $primary-color;
+  height: 99px;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  @include mq('md') {
+     display: none;
+  }
+}
+
+// NAVIGATION ITEMS
+.nav-items {
+  width: 100%;
+}
+
+.nav-1,
+.nav-2,
+.nav-3,
+.nav-4,
+.nav-5,
+.nav-6 {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 20px 10px;
+  margin-left: -3.5px;
+  display: inline-block;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  width: 16.6%;
+}
+
+.nav-1 {
+border-left: 1.5px solid rgba(0, 0, 0, 0.2);
+box-shadow: 0px 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.nav-6 {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 1.5px 0px 0px 0px rgba(255, 255, 255, 0.1);
+}
+
+//================
+// ON HOVER
+//================
+
+.navigation li a:hover {
+  text-decoration: none;
+}
+.navigation li:hover {
+  color: $white;
+}
+
+// CHANGES COLOUR OF ICONS
+.navigation .nav-1:hover {
+  background-color: $web-design;
+  .fa-code {
+    color: $white;
+  }
+}
+.navigation .nav-2:hover {
+  background-color: $it-support;
+  .fa-desktop {
+    color: $white;
+  }
+}
+.navigation .nav-3:hover {
+  background-color: $telecoms-services;
+  .fa-phone-volume {
+    color: $white;
+  }
+}
+.navigation .nav-4:hover {
+  background-color: $bespoke-software;
+  .fa-th {
+    color: $white;
+  }
+}
+.navigation .nav-5:hover {
+  background-color: $digital-marketing;
+  .fa-chart-line {
+    color: $white;
+  }
+}
+.navigation .nav-6:hover {
+  background-color: $cyber-security;
+  .fa-shield-alt {
+    color: $white;
+  }
+}
+
+// MAKES NAV BUTTON TEXT SMALLER
+li span {
+  font-size: 10px;
+  line-height: 10px;
+}
+
+// COLOURS FOR ICONS FOR NAV BUTTONS
+.fa-code {
+  color: $web-design;
+}
+.fa-desktop {
+  color: $it-support;
+}
+.fa-phone-volume {
+  color: $telecoms-services;
+}
+.fa-th {
+  color: $bespoke-software;
+}
+.fa-chart-line {
+  color: $digital-marketing;
+}
+.fa-shield-alt {
+  color: $cyber-security;
+}
+
+//CHANGES COLOUR OF NAV BUTTONS ON HOVER
+.nav-1:hover .web-design {
+  display: flex;
+  background-color: $main-button-color-dark;
+}
+.nav-2:hover .it-support {
+  display: flex;
+  background-color: $it-support-dark;
+}
+.nav-3:hover .telecoms-services {
+  display: flex;
+  background-color: $telecoms-services-dark;
+}
+.nav-4:hover .bespoke-software {
+  display: flex;
+  background-color: $bespoke-software-dark;
+}
+.nav-5:hover .digital-marketing {
+  display: flex;
+  background-color: $digital-marketing-dark;
+}
+.nav-6:hover .cyber-security {
+  display: flex;
+  background-color: $cyber-security-dark;
+}
+
+// NAV BAR THAT DISPLAYS ON HOVER
+
+.nav-bar {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  font-size: 1rem;
+  height: 45px;
+  padding-top: 13px;
+  margin-top: 19px;
+@include mq('lg'){
+  font-size: 13px;
+}
+}
+
+.nav-bar {
+  width: 100vw;
+  left: 0;
+}
+
+.dash {
+  display: inline-block;
+}
+
+.nav-bar .dash::after {
+content: '';
+margin: 20px;
+margin-top: 10px;
+margin-bottom: 5px;
+width: 8px;
+height: 2px;
+display: inline-block;
+background-color: $white;
+}
+

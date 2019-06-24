@@ -1,0 +1,201 @@
+// main: ../style.scss
+
+//================================//
+//       SERVICE CARDS
+//================================//
+
+
+// SERVICE LIST CONTAINER
+.service-list {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+// SERVICE CARD BODY AND TITLE
+.card-body {
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+  border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333645;
+  padding: 10px 30px 30px;
+  margin: 10px;
+h2 {
+  font-weight: 550;
+  font-size: 18px;
+  line-height: 45px;
+}
+}
+
+// CARD TEXT
+.card-text {
+  margin-top: -4px;
+  margin-bottom: -4px;
+  font-size: 13px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+// CHANGES WIDTH OF CARDS ON FLEX TO DISPLAY 2:4 IN LARGE DEVICES
+.card-1, .card-2 {
+  width: 50%;
+}
+.card-3, .card-4, .card-5, .card-6 {
+  width: 25%;
+}
+@include mq('lg') {
+  .card-3, .card-4, .card-5, .card-6 {
+  width: 50%;
+}
+}
+@include mq('sm') {
+.card-1, .card-2, .card-3, .card-4, .card-5, .card-6 {
+  width: 100%;
+}
+}
+
+//CHANGES COLOUR OF CARD PROPERTIES ON HOVER TO WHITE
+.card-body:hover {
+  color: $white;
+.btn-read {
+  background-color: $white;
+}
+ .fa-code,
+ .fa-desktop,
+ .fa-th,
+ .fa-chart-line,
+ .fa-shield-alt,
+ .fa-phone-volume {
+    background-color: $white;
+ }
+h2::after {
+   background-color: $white;
+ }
+}
+
+// CHANGES COLOUR OF CARDS ON HOVER TO SERVICE COLOUR
+.card-1 .card-body:hover {
+  background-color: $web-design;
+.btn-read {
+  color: $web-design;
+}
+ .fa-code {
+   color: $web-design;
+ }
+}
+
+.card-2 .card-body:hover {
+  background-color: $it-support;
+.btn-read {
+  color: $it-support;
+}
+ .fa-desktop {
+   color: $it-support;
+ }
+}
+
+.card-3 .card-body:hover {
+  background-color: $telecoms-services;
+.btn-read {
+  color: $telecoms-services;
+}
+ .fa-phone-volume {
+   color: $telecoms-services;
+ }
+}
+
+.card-4 .card-body:hover {
+  background-color: $bespoke-software;
+.btn-read {
+  color: $bespoke-software;
+}
+ .fa-th {
+   color: $bespoke-software;
+ }
+}
+
+.card-5 .card-body:hover {
+  background-color: $digital-marketing;
+.btn-read {
+  color: $digital-marketing;
+}
+ .fa-chart-line {
+   color: $digital-marketing;
+ }
+}
+
+.card-6 .card-body:hover {
+  background-color: $cyber-security;
+.btn-read {
+  color: $cyber-security;
+}
+ .fa-shield-alt {
+   color: $cyber-security
+ }
+}
+
+
+
+// CARD SERVICES ICONS
+.card-title i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    margin: 0 auto;
+    height: 56px;
+    width: 56px;
+    border: transparent solid 1px;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+
+//COLOUR OF ICONS
+.card-title .fa-code {    //card 1
+  background-color: $web-design;
+}
+.card-title .fa-desktop {   //card 2
+  background-color: $it-support;
+}
+.card-title .fa-phone-volume {     //card 3
+  background-color: $telecoms-services;
+}
+.card-title .fa-th {    //card 4
+  background-color:  $bespoke-software;
+}
+.card-title .fa-chart-line {    //card 5
+  background-color:  $digital-marketing;
+}
+.card-title .fa-shield-alt {    //card 6
+  background-color:  $cyber-security;
+}
+
+// LITTLE HORIZONTAL BREAK AFTER CARD TITLE
+.card-body h2::after {
+content: '';
+top: 5;
+bottom: 0;
+left: 0;
+right: 0;
+margin: 5px auto;
+width: 28px;
+height: 3px;
+display: block;
+background-color: $primary-color;
+}
+
+// TAKES UNDERLINE PROPERTY OFF A TAGS
+.card-1 a,
+.card-2 a,
+.card-3 a,
+.card-4 a,
+.card-5 a,
+.card-6 a{
+  text-decoration: none;
+}

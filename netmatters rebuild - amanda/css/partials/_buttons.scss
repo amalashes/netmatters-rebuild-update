@@ -1,0 +1,114 @@
+// main: ../style.scss
+
+//================================//
+//       BUTTONS
+//================================//
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn {
+  padding: px-to-rem(20px) px-to-rem(20px);
+  border-radius: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: px-to-rem(18px);
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-find {          // BUTTON FOR MAIN IMAGE
+    @extend .btn;
+    font-size: 20px;
+    width: 225px;
+    height: 62px;
+  }
+  &-sup {       // BUTTON FOR SUPPORT IN MAIN-NAV
+    @extend .btn;
+    background: $it-support;
+    margin-right: px-to-rem(20px);
+      height: 57px;
+    @include mq('md') {
+       display: none;
+    }
+  }
+  &-con {         // BUTTON FOR CONTACT IN MAIN-NAV
+    @extend .btn;
+    background: #999aa2;
+    margin-right: px-to-rem(20px);
+      height: 57px;
+    @include mq('md') {
+       display: none;
+    }
+  }
+  &-our {         //BUTTON OUR CULTURE IN ABOUT SECTION
+    @extend .btn;
+    background: $white;
+    color: $primary-color;
+    width: 170px;
+    height: 47px;
+    padding: 0;
+    margin-top:-20px;
+  }
+}
+
+// ARROW FOR FIND OUT MORE BUTTON ON MAIN IMAGE
+.fa-arrow-right {
+margin-left: px-to-rem(20px);
+}
+
+//BUTTON READ MORE ON CARDS
+.btn-read {
+  @extend .btn;
+  padding: 10px;
+  padding-top: px-to-rem(10px);
+  margin: 0;
+  height: px-to-rem(47px);
+  width: px-to-rem(128px);
+}
+
+// CHANGES COLOURS OF BUTTONS ON SERVICES LIST
+.card-1 .btn-read {
+  background-color:  $web-design;
+}
+.card-2 .btn-read {
+  background-color:  $it-support;
+}
+.card-3 .btn-read {
+  background-color:  $telecoms-services;
+}
+.card-4 .btn-read {
+  background-color:  $bespoke-software;
+}
+.card-5 .btn-read {
+  background-color:  $digital-marketing;
+}
+.card-6 .btn-read {
+  background-color:  $cyber-security;
+}
+
+// CHANGES COLOUR OF BUTTONS ON LATEST SECTION
+.latest-body .btn-read {
+  background-color: $main-button-color;
+}
+.insights .mid-btn {
+  background-color: $it-support;
+}
+
+.insights .mid-btn:hover, .btn-sup:hover {
+  background-color: $it-support-dark;
+}
+
+// MAKES BUTTONS DARKEN WHEN HOVERED OVER
+.btn-find:hover, .btn-read:hover {
+  background-color: $main-button-color-dark;
+}
+
+.btn-our:hover {
+  background-color: $white-darken;
+}
+
+.btn-con:hover {
+  background-color: #84858F;
+}

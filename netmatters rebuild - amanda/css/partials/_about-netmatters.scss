@@ -1,0 +1,41 @@
+// main: ../style.scss
+
+//================================//
+//        ABOUT NETMATTERS
+//================================//
+
+// BACKGROUND IMAGE FOR ABOUT SECTION
+.netmatters-bg {
+  padding-bottom: 45px;
+  background-image: url("../img/content/branded.png");
+  background-color: $primary-color;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  @media (max-width: 1091px) {
+    background-image: none;
+  }
+}
+
+// ABOUT SECTION TEXT
+.about-text {
+  padding-top: 20px;
+  letter-spacing: .03rem;
+  line-height: 1.875rem;
+  text-align: left;
+  z-index: 1;
+  & h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+  & p {
+    padding-top: .5rem;
+  }
+  @include mqmin('lg'){
+  width: 49%;
+}
+  & span {
+    font-weight: 600;
+  }
+}
